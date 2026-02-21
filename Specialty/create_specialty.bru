@@ -1,0 +1,22 @@
+meta {
+  name: create_specialty
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/api/v1/specialties
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Neurology"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
