@@ -1,0 +1,23 @@
+meta {
+  name: Update Specialty
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{BASE_URL}}/api/v1/specialties/019c7fac-7e78-74b8-aa39-6e12530270e3
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Neurology",
+    "description": "All kind of treatment of neurology disease in one place"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Delete Specialty
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{BASE_URL}}/api/v1/specialties/019c7d36-0830-718d-9f3a-c7109051a9cb
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Neurology"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

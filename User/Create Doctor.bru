@@ -1,0 +1,40 @@
+meta {
+  name: Create Doctor
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/api/v1/users/create-doctor
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "password": "StrongPassword123!",
+    "doctor": {
+      "name": "Dr. Sarah Ahmed",
+      "email": "sarah.ahmed@example.com",
+      "profilePhoto": "https://example.com/images/dr-sarah-ahmed.jpg",
+      "contactNumber": "+8801712345678",
+      "address": "123 Dhanmondi, Dhaka, Bangladesh",
+      "registrationNumber": "BMDC-12345",
+      "experience": 8,
+      "gender": "FEMALE",
+      "appoinmentFee": 1500,
+      "qualification": "MBBS, FCPS (Cardiology)",
+      "currentWorkingPlace": "Square Hospital Ltd.",
+      "designation": "Consultant Cardiologist"
+    },
+    "specialties": [
+      "019c84e2-a9c6-74ad-bc35-9f394e7fd514",
+      "019c84e2-d2f5-714f-9fec-fc2f4c723802"
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

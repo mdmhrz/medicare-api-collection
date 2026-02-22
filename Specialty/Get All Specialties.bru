@@ -1,0 +1,22 @@
+meta {
+  name: Get All Specialties
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/api/v1/specialties
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Neurology"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
