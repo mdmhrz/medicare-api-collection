@@ -1,0 +1,31 @@
+meta {
+  name: Update Doctor By ID
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{BASE_URL}}/api/v1/doctors/019c85f9-3019-7312-9aaa-dab694988c68
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "doctor": {
+      "name": "Dr. Sarah Ahmed Jhinuk"
+    },
+    "specialties": [
+      {"specialtyId": "019c84e2-d2f5-714f-9fec-fc2f4c723802"}
+    ]
+  }
+}
+
+body:multipart-form {
+  name: Dr. Sarah Ahmed Jhinuk
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

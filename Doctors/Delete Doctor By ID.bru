@@ -1,0 +1,20 @@
+meta {
+  name: Delete Doctor By ID
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{BASE_URL}}/api/v1/doctors/019c85f9-3019-7312-9aaa-dab694988c68
+  body: none
+  auth: inherit
+}
+
+body:multipart-form {
+  name: Dr. Sarah Ahmed Jhinuk
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
