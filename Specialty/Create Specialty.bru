@@ -6,7 +6,7 @@ meta {
 
 post {
   url: {{BASE_URL}}/api/v1/specialties
-  body: json
+  body: multipartForm
   auth: inherit
 }
 
@@ -14,6 +14,15 @@ body:json {
   {
     "title": "Neurology"
   }
+}
+
+body:multipart-form {
+  data: {  "title": "Sociology"}
+  file: @file(/home/razu/Downloads/cardiology.avif)
+}
+
+body:file {
+  file: @file()
 }
 
 settings {

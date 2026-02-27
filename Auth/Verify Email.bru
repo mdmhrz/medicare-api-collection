@@ -1,11 +1,11 @@
 meta {
-  name: Login
+  name: Verify Email
   type: http
-  seq: 2
+  seq: 7
 }
 
 post {
-  url: {{BASE_URL}}/api/v1/auth/login
+  url: {{BASE_URL}}/api/v1/auth/verify-email
   body: json
   auth: inherit
 }
@@ -17,14 +17,8 @@ headers {
 body:json {
   {
     "email": "mdmobarakhossainrazu@gmail.com",
-    "password": "12345678"
+    "otp": "186110"
   }
-  
-  // This is super admin credential
-  // {
-  //   "email": "superadmin2@medicare.com",
-  //   "password": "12345678"
-  // }
 }
 
 settings {

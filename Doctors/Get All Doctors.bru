@@ -5,9 +5,24 @@ meta {
 }
 
 get {
-  url: {{BASE_URL}}/api/v1/doctors
+  url: {{BASE_URL}}/api/v1/doctors?user.role=DOCTOR
   body: none
   auth: inherit
+}
+
+params:query {
+  user.role: DOCTOR
+  ~appoinmentFee[lte]: 1000
+  ~appoinmentFee[gte]: 500
+  ~searchTerm: Neu
+  ~experience[gt]: 10
+  ~include: specialties
+  ~sortOrder: asc
+  ~fields: name, email
+  ~sortBy: appointmentFee
+  ~gender: MALE
+  ~limit: 1
+  ~page: 2
 }
 
 settings {
